@@ -4,18 +4,29 @@ require('svelte/register');
 const pages = path.join(__dirname, '../../pages');
 const { template } = require(path.join(pages, 'template'));
 
-const render = (req, res) => {
+const dataCollecting = () => {
+  return {
+    page: 'job-details',
+  };
+};
+
+const sendResponse = (req, res) => {
   const App = require(path.join(pages, 'app.svelte')).default;
 
-  const { head, html, css } = App.render({
-    page: 'job-details'
-  });
+  const { head, html, css } = App.render(res.locals);
 
   res.end(template({
     css: css.code,
+    data: res.locals,
     head,
     html
   }));
+};
+
+const render = (req, res) => {
+  res.locals = dataCollecting();
+
+  return sendResponse(req, res);
 };
 
 module.exports = {

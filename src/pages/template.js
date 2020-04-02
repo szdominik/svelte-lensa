@@ -1,5 +1,6 @@
 const template = ({
   css,
+  data,
   head,
   html,
 }) => `<!doctype html>
@@ -11,7 +12,6 @@ const template = ({
     name='viewport'
     content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
   />
-  <title>lensa-site as svelte app</title>
   ${head}
   <link rel='stylesheet' href='bundle.css'>
   <style>${css}</style>
@@ -19,7 +19,10 @@ const template = ({
 
 <body>
   ${html}
-	<script src='bundle.js'></script>
+  <script type='text/javascript'>
+    window.__INITIAL_STATE__ = ${JSON.stringify(data)}
+  </script>
+  <script src='bundle.js'></script>
 </body>
 </html>
 `;

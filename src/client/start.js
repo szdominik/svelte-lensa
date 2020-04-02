@@ -3,9 +3,7 @@ import App from 'pages/app';
 const app = new App({
   hydrate: true,
 	target: document.body,
-	props: {
-		page: 'job-details'
-	}
+	props: window.__INITIAL_STATE__,
 });
 
 window.app = app;
