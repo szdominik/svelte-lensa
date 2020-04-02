@@ -13,8 +13,7 @@ const template = ({
     content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
   />
   ${head}
-  <link rel='stylesheet' href='bundle.css'>
-  <style>${css}</style>
+  ${ css ? `<style>${css}</style>` : "<link rel='stylesheet' href='bundle.css'>" }
 </head>
 
 <body>
