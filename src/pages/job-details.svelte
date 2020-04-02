@@ -1,6 +1,12 @@
 <script>
   import Header from '../components/header';
+
+  export let highlightedJob;
 </script>
+
+<svelte:head>
+  <title>{ highlightedJob.title } job in { highlightedJob.city } at { highlightedJob.company } | Lensa`</title>
+</svelte:head>
 
 <style>
   .job-details {

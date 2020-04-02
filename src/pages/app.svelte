@@ -2,6 +2,7 @@
   import JobDetailsPage from './job-details.svelte';
 
   export let page;
+  export let highlightedJob;
 </script>
 
 <style>
@@ -30,5 +31,5 @@
 </style>
 
 {#if page === 'job-details'}
-  <JobDetailsPage />
+  <JobDetailsPage highlightedJob={ highlightedJob } />
 {/if}

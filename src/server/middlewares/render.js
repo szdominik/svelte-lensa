@@ -7,6 +7,11 @@ const { template } = require(path.join(pages, 'template'));
 const dataCollecting = () => {
   return {
     page: 'job-details',
+    highlightedJob: {
+      title: 'Developer',
+      city: 'Seattle',
+      company: 'IBM'
+    },
   };
 };
 
