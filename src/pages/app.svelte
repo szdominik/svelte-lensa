@@ -1,5 +1,5 @@
 <script>
-  import JobDetailsPage from 'pages/job-details.svelte';
+  import JobDetailsPage from './job-details.svelte';
 
   export let page;
 </script>
