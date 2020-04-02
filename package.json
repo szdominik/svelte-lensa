@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --config build-config/webpack.config.js",
-    "dev": "NODE_ENV=development webpack-dev-server --progress --config build-config/webpack.config.js --content-base public"
+    "start-dev": "NODE_ENV=development webpack-dev-server --progress --config build-config/webpack.config.js --content-base public",
+    "start": "node src/server/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
