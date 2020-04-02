@@ -1,11 +1,20 @@
 <script>
+  import Header from '../components/header';
 </script>
 
 <style>
-	h1 {
-		color: var(--skyblue);
-	}
+  .job-details {
+    max-width: 1354px;
+    padding: 80px 15px 0;
+  }
+
+  @media (min-width: 992px) {
+    .job-details {
+      padding: 100px 0 0 140px;
+    }
+  }
 </style>
 
-<h1>Hello World!</h1>
-some other content
+<Header />
+<div class='job-details'>
+</div>
