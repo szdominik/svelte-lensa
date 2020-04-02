@@ -1,11 +1,11 @@
 <script>
-	export let name;
 </script>
 
 <style>
 	h1 {
-		color: blue;
+		color: var(--skyblue);
 	}
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>Hello World!</h1>
+some other content

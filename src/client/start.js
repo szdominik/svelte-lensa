@@ -1,9 +1,9 @@
-import JobDetails from '../pages/job-details';
+import App from './app';
 
-const app = new JobDetails({
+const app = new App({
 	target: document.body,
 	props: {
-		name: 'Dominik'
+		page: 'job-details'
 	}
 });
 
