@@ -10,13 +10,15 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			svelte: path.resolve('node_modules', 'svelte')
+      svelte: path.resolve('node_modules', 'svelte'),
+      pages: path.resolve(__dirname, '../src/pages'),
+      components: path.resolve(__dirname, '../src/components'),
 		},
 		extensions: ['.mjs', '.js', '.svelte'],
 		mainFields: ['svelte', 'browser', 'module', 'main']
 	},
 	output: {
-		path: __dirname + '/../public/build',
+    path: path.join(__dirname + '/../public'),
 		filename: '[name].js',
 		chunkFilename: '[name].[id].js'
 	},
@@ -51,5 +53,5 @@ module.exports = {
 			filename: '[name].css'
 		})
 	],
-	devtool: prod ? false: 'source-map'
+  devtool: prod ? false: 'source-map'
 };
