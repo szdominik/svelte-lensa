@@ -2,8 +2,7 @@ const template = ({
   css,
   head,
   html,
-}) => `
-<!doctype html>
+}) => `<!doctype html>
 <html>
 <head>
   <meta charSet='utf-8' />
