@@ -1,0 +1,19 @@
+{
+  "name": "svelte-lensa",
+  "description": "lensa as a svelte project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "sirv public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szdominik/svelte-lensa.git"
+  },
+  "author": "@szdominik",
+  "dependencies": {
+    "sirv-cli": "^0.4.5"
+  },
+  "devDependencies": {
+    "svelte": "^3.20.1"
+  }
+}
