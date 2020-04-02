@@ -1,13 +1,13 @@
 const path = require('path');
-const express = require('express');
-const app = express();
+const polka = require('polka');
+const serve = require('serve-static');
 
-app.use(express.static('public'));
+const dir = path.join(__dirname, '../../public');
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname + '/public/index.html'));
-});
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log('App is listening on port 3000...');
-});
+polka()
+	.use(serve(dir))
+	.listen(PORT, err => {
+		if (err) throw err;
+		console.log(`> Running on localhost:${PORT}`);
+	});
