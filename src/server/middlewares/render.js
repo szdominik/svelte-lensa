@@ -10,7 +10,8 @@ const dataCollecting = () => {
     highlightedJob: {
       title: 'Developer',
       city: 'Seattle',
-      company: 'IBM'
+      company: 'IBM',
+      url: 'https://lensa.com',
     },
   };
 };

@@ -1,5 +1,6 @@
 <script>
   import Header from '../components/header';
+  import Button from '../components/button';
 
   export let highlightedJob;
 </script>
@@ -12,6 +13,7 @@
   .job-details {
     max-width: 1354px;
     padding: 80px 15px 0;
+    text-align: center;
   }
 
   @media (min-width: 992px) {
@@ -23,4 +25,8 @@
 
 <Header />
 <div class='job-details'>
+  <Button
+    text='Apply'
+    callback={ () => { console.log(highlightedJob.url); } }
+  />
 </div>
