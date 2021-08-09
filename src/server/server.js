@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 polka()
   .use(serve(publicDir))
   .use('/', render)
-	.listen(PORT, err => {
-		if (err) throw err;
-		console.log(`> Running on localhost:${PORT}`);
-	});
+  .listen(PORT, (err) => {
+    if (err) throw err;
+    console.log(`> Running on localhost:${PORT}`);
+  });

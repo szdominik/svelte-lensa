@@ -5,10 +5,15 @@
   export let highlightedJob;
 </script>
 
+{#if page === 'job-details'}
+  <JobDetailsPage {highlightedJob} />
+{/if}
+
 <style>
   :global(html) {
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+      sans-serif;
 
     --milkblue: #f8fafb;
     --skyblue: #0073d6;
@@ -29,7 +34,3 @@
     color: var(--grey-2);
   }
 </style>
-
-{#if page === 'job-details'}
-  <JobDetailsPage highlightedJob={ highlightedJob } />
-{/if}

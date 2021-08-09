@@ -1,0 +1,5 @@
+# Ignore artifacts:
+public
+gitlab-runner
+coverage
+.vscode

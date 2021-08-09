@@ -1,7 +1,5 @@
 <script>
   import classNames from 'classnames';
-  import Header from '../components/header';
-  import Button from '../components/button';
 
   export let text;
   export let url;
@@ -9,6 +7,19 @@
   export let subText = null;
   export let uppercase = false;
 </script>
+
+<a class="blue-button" href={!callback ? url : null} on:click={callback}>
+  <div class={classNames('button-text', uppercase, { 'multi-line': subText })}>
+    <span>
+      {text}
+    </span>
+    {#if subText}
+      <span>
+        {subText}
+      </span>
+    {/if}
+  </div>
+</a>
 
 <style>
   .blue-button {
@@ -53,20 +64,3 @@
     flex-direction: column;
   }
 </style>
-
-<a
-  class='blue-button'
-  href={ !callback ? url : null}
-  on:click={ callback }
->
-  <div class={ classNames('button-text', uppercase, { 'multi-line': subText }) }>
-    <span>
-      { text }
-    </span>
-    {#if subText}
-      <span>
-        { subText }
-      </span>
-    {/if}
-  </div>
-</a>

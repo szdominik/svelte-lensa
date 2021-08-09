@@ -1,3 +1,9 @@
+<div class="lensa-header">
+  <a href="/" class="logo">
+    <img src="https://cdn.lensa.com/img/lensa-logos/LENSA_grey_logo.svg" alt="Lensa" />
+  </a>
+</div>
+
 <style>
   .lensa-header {
     position: fixed;
@@ -18,7 +24,6 @@
     height: 20px;
   }
 
-
   @media (min-width: 992px) {
     .lensa-header {
       height: 70px;
@@ -30,9 +35,3 @@
     }
   }
 </style>
-
-<div class='lensa-header'>
-  <a href='/' class='logo'>
-    <img src='https://cdn.lensa.com/img/lensa-logos/LENSA_grey_logo.svg' alt='Lensa'>
-  </a>
-</div>

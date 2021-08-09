@@ -21,12 +21,14 @@ const sendResponse = (req, res) => {
 
   const { head, html, css } = App.render(res.locals);
 
-  res.end(template({
-    css: css.code,
-    data: res.locals,
-    head,
-    html
-  }));
+  res.end(
+    template({
+      css: css.code,
+      data: res.locals,
+      head,
+      html,
+    })
+  );
 };
 
 const render = (req, res) => {

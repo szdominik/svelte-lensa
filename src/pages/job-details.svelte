@@ -6,8 +6,21 @@
 </script>
 
 <svelte:head>
-  <title>{ highlightedJob.title } job in { highlightedJob.city } at { highlightedJob.company } | Lensa`</title>
+  <title
+    >{highlightedJob.title} job in {highlightedJob.city} at {highlightedJob.company}
+    | Lensa`</title
+  >
 </svelte:head>
+
+<Header />
+<div class="job-details">
+  <Button
+    text="Apply"
+    callback={() => {
+      console.log(highlightedJob.url);
+    }}
+  />
+</div>
 
 <style>
   .job-details {
@@ -22,11 +35,3 @@
     }
   }
 </style>
-
-<Header />
-<div class='job-details'>
-  <Button
-    text='Apply'
-    callback={ () => { console.log(highlightedJob.url); } }
-  />
-</div>

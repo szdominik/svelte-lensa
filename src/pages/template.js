@@ -1,9 +1,4 @@
-const template = ({
-  css,
-  data,
-  head,
-  html,
-}) => `<!doctype html>
+const template = ({ css, data, head, html }) => `<!doctype html>
 <html>
 <head>
   <meta charSet='utf-8' />
@@ -13,7 +8,7 @@ const template = ({
     content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
   />
   ${head}
-  ${ css ? `<style>${css}</style>` : "<link rel='stylesheet' href='bundle.css'>" }
+  ${css ? `<style>${css}</style>` : "<link rel='stylesheet' href='bundle.css'>"}
 </head>
 
 <body>
