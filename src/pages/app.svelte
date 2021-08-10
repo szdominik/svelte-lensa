@@ -3,10 +3,11 @@
 
   export let page;
   export let highlightedJob;
+  export let recommendedJobs;
 </script>
 
 {#if page === 'job-details'}
-  <JobDetailsPage {highlightedJob} />
+  <JobDetailsPage {highlightedJob} {recommendedJobs} />
 {/if}
 
 <style>

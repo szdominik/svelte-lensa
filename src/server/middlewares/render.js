@@ -1,4 +1,5 @@
 const path = require('path');
+const randomJobs = require('./random-jobs');
 require('svelte/register');
 
 const pages = path.join(__dirname, '../../pages');
@@ -13,6 +14,7 @@ const dataCollecting = () => {
       company: 'IBM',
       url: 'https://lensa.com',
     },
+    recommendedJobs: randomJobs,
   };
 };
 

@@ -1,8 +1,10 @@
 <script>
   import Header from '../components/header';
   import Button from '../components/button';
+  import JobCard from '../components/job-card';
 
   export let highlightedJob;
+  export let recommendedJobs;
 </script>
 
 <svelte:head>
@@ -22,9 +24,17 @@
       }}
     />
     <div class="similar-jobs">Similar jobs in the area</div>
-    <div class="recommended-jobs" />
+    <div class="recommended-jobs">
+      {#each recommendedJobs as job}
+        <JobCard {job} />
+      {/each}
+    </div>
   </div>
-  <div class="job-details-sidebar" />
+  <div class="job-details-sidebar">
+    {#each recommendedJobs.slice(0, 10) as job}
+      <JobCard {job} />
+    {/each}
+  </div>
 </div>
 
 <style>
