@@ -19,6 +19,7 @@
     --milkblue: #f8fafb;
     --skyblue: #0073d6;
     --blue-2: #358cd8;
+    --dark-grey-4: #d5d5d5;
     --green-1: #338539;
     --green-2: #246028;
     --grey-1: #d3d3d3;

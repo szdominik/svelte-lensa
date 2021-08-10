@@ -10,7 +10,7 @@
 <ApplyButton
   text="Apply"
   callback={() => {
-    console.log(job.url);
+    console.log(job.apply_url);
   }}
 />
 

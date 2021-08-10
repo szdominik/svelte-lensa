@@ -2,6 +2,7 @@
   import Header from '../components/header';
   import JobCard from '../components/job-card';
   import JobDetailsHeader from '../components/job-details-header';
+  import JobDetailsTabs from '../components/job-details-tabs';
 
   export let highlightedJob;
   export let recommendedJobs;
@@ -18,6 +19,7 @@
 <div class="job-details">
   <div class="job-details-main">
     <JobDetailsHeader job={highlightedJob} />
+    <JobDetailsTabs job={highlightedJob} />
     <div class="similar-jobs">Similar jobs in the area</div>
     <div class="recommended-jobs">
       {#each recommendedJobs as job}
