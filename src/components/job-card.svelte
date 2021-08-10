@@ -1,5 +1,6 @@
 <script>
   import classNames from 'classnames';
+  import JobSubTitle from './job-sub-title';
 
   export let className;
   export let job;
@@ -9,25 +10,7 @@
   <a class="job-card-title" href={job.url} target="_blank" rel="nofollow noopener">
     {job.title}
   </a>
-  <div class="job-sub-title">
-    <span class="icon-with-text">
-      <img
-        src="https://cdn.lensa.com/img/icons/jobcard_icon_building.svg"
-        alt="company building"
-        width="13"
-        height="13"
-      />
-      <span>
-        {job.company}
-      </span>
-    </span>
-    <span class="icon-with-text">
-      <img src="https://cdn.lensa.com/img/icons/jobcard_icon_location.svg" alt="location" width="13" height="13" />
-      <span>
-        {job.city}
-      </span>
-    </span>
-  </div>
+  <JobSubTitle {job} />
   <div class="job-card-body">
     {job.description}
     <a class="read-more" href={job.url} target="_blank" rel="nofollow noopener"> Read more </a>
@@ -74,16 +57,6 @@
     color: #333;
   }
 
-  .job-sub-title {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 22px;
-    text-transform: uppercase;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-
   .read-more {
     position: absolute;
     left: 0;
@@ -109,22 +82,5 @@
     margin-right: 15px;
     display: inline-flex;
     align-items: center;
-  }
-
-  .icon-with-text span {
-    vertical-align: middle;
-  }
-
-  .icon-with-text img {
-    width: 13px;
-    height: 13px;
-    vertical-align: middle;
-    margin-right: 4px;
-  }
-
-  @media (min-width: 992px) {
-    .job-sub-title {
-      flex-direction: row;
-    }
   }
 </style>

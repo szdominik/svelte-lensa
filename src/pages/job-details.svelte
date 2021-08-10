@@ -2,6 +2,7 @@
   import Header from '../components/header';
   import Button from '../components/button';
   import JobCard from '../components/job-card';
+  import JobDetailsHeader from '../components/job-details-header';
 
   export let highlightedJob;
   export let recommendedJobs;
@@ -17,6 +18,7 @@
 <Header />
 <div class="job-details">
   <div class="job-details-main">
+    <JobDetailsHeader job={highlightedJob} />
     <Button
       text="Apply"
       callback={() => {
