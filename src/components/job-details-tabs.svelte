@@ -1,17 +1,12 @@
 <script>
+  import DescriptionTab from './description-tab';
+
   export let job;
 </script>
 
 <div class="job-details-tabs-container">
   <div class="description-tab">
-    <h4>Company Description</h4>
-    <div class="company-description description">
-      {@html job.company_description}
-    </div>
-    <h4>Job Description</h4>
-    <div class="description">
-      {@html job.description}
-    </div>
+    <DescriptionTab {job} />
   </div>
 </div>
 
@@ -24,26 +19,6 @@
     border: 1px solid var(--dark-grey-4);
     border-top: none;
     border-radius: 0 0 5px 5px;
-  }
-
-  .description-tab h4 {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.56;
-    text-transform: uppercase;
-    color: var(--grey-3);
-    margin: 15px 0 10px 0;
-  }
-
-  .company-description {
-    margin-bottom: 45px;
-  }
-
-  .description {
-    font-size: 18px;
-    font-weight: 300;
-    word-wrap: break-word;
-    line-height: 1.56;
   }
 
   @media (min-width: 992px) {
