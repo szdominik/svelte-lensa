@@ -5,6 +5,7 @@ module.exports = {
   jobadvert_id: 'aa000000000000000000000000000022',
   apply_url: 'https://lensa.com/about-us',
   company: 'Wells Fargo',
+  company_description: 'This is the company description part 5',
   description,
   keywords: ['programmer', 'developer', 'python', 'fullstack'],
   city: 'Washington, DC',

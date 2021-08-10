@@ -4,6 +4,10 @@
 
 <div class="job-details-tabs-container">
   <div class="description-tab">
+    <h4>Company Description</h4>
+    <div class="company-description description">
+      {@html job.company_description}
+    </div>
     <h4>Job Description</h4>
     <div class="description">
       {@html job.description}
@@ -22,13 +26,6 @@
     border-radius: 0 0 5px 5px;
   }
 
-  .description {
-    font-size: 18px;
-    font-weight: 300;
-    word-wrap: break-word;
-    line-height: 1.56;
-  }
-
   .description-tab h4 {
     font-size: 18px;
     font-weight: 700;
@@ -36,6 +33,17 @@
     text-transform: uppercase;
     color: var(--grey-3);
     margin: 15px 0 10px 0;
+  }
+
+  .company-description {
+    margin-bottom: 45px;
+  }
+
+  .description {
+    font-size: 18px;
+    font-weight: 300;
+    word-wrap: break-word;
+    line-height: 1.56;
   }
 
   @media (min-width: 992px) {
