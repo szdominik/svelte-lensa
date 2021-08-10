@@ -18,7 +18,12 @@
 
     --milkblue: #f8fafb;
     --skyblue: #0073d6;
+    --blue-2: #358cd8;
+    --green-1: #338539;
+    --green-2: #246028;
+    --grey-1: #d3d3d3;
     --grey-2: #333;
+    --grey-3: #4a4a4a;
   }
 
   :global(*),

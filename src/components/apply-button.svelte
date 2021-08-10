@@ -22,10 +22,10 @@
     max-width: 200px;
     outline: none;
     cursor: pointer;
-    background-color: #338539;
+    background-color: var(--green-1);
     border-radius: 5px;
     border: 0;
-    border-bottom: 3px solid #246028;
+    border-bottom: 3px solid var(--green-2);
     color: white;
     font-size: 16px;
     font-weight: 600;

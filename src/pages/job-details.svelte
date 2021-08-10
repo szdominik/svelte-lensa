@@ -47,7 +47,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 1.08;
-    color: #4a4a4a;
+    color: var(--grey-3);
   }
 
   @media (min-width: 992px) {

@@ -23,7 +23,7 @@
     margin-bottom: 15px;
     padding: 15px 20px 20px;
     background-color: white;
-    border: 1px solid #d3d3d3;
+    border: 1px solid var(--grey-1);
     border-radius: 6px;
   }
 
@@ -36,13 +36,13 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 28px;
-    color: #0073d6;
+    color: var(--skyblue);
     text-decoration: none;
     cursor: pointer;
   }
 
   .job-card-title:hover {
-    color: #358cd8;
+    color: var(--blue-2);
     text-decoration: underline;
   }
 
@@ -54,7 +54,7 @@
     line-height: 1.56;
     max-height: 84px;
     overflow: hidden;
-    color: #333;
+    color: var(--grey-2);
   }
 
   .read-more {
@@ -70,12 +70,12 @@
     font-weight: 600;
     line-height: 1.56;
     text-decoration: underline;
-    color: #0073d6;
+    color: var(--skyblue);
     cursor: pointer;
   }
 
   .read-more:hover {
-    color: #358cd8;
+    color: var(--blue-2);
   }
 
   .icon-with-text {
