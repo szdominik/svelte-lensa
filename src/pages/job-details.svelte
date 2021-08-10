@@ -1,6 +1,5 @@
 <script>
   import Header from '../components/header';
-  import Button from '../components/button';
   import JobCard from '../components/job-card';
   import JobDetailsHeader from '../components/job-details-header';
 
@@ -19,12 +18,6 @@
 <div class="job-details">
   <div class="job-details-main">
     <JobDetailsHeader job={highlightedJob} />
-    <Button
-      text="Apply"
-      callback={() => {
-        console.log(highlightedJob.url);
-      }}
-    />
     <div class="similar-jobs">Similar jobs in the area</div>
     <div class="recommended-jobs">
       {#each recommendedJobs as job}
