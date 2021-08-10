@@ -2,25 +2,49 @@
   import DescriptionTab from './description-tab';
 
   export let job;
+
+  let activeMainTab = 'job';
+  let activateSubTab = 'description';
 </script>
 
 <div class="main-tabs">
-  <h2 class="active">Job</h2>
-  <h2>Company</h2>
+  <h2 class:active={activeMainTab === 'job'}>Job</h2>
+  <h2 class:active={activeMainTab === 'company'}>Company</h2>
 </div>
 <div class="sub-tabs">
-  <h3 class="active">Description</h3>
-  <h3>Salary</h3>
-  <h3>Skills</h3>
-  <h3>Benefits</h3>
-  <h3 class="non-visible">Summary</h3>
-  <h3 class="non-visible">Job trends</h3>
-  <h3 class="non-visible">Job openings</h3>
-  <h3 class="non-visible">Closed jobs</h3>
+  <h3 class:active={activateSubTab === 'description'} class:non-visible={activeMainTab === 'company'}>Description</h3>
+  <h3 class:active={activateSubTab === 'salary'} class:non-visible={activeMainTab === 'company'}>Salary</h3>
+  <h3 class:active={activateSubTab === 'skills'} class:non-visible={activeMainTab === 'company'}>Skills</h3>
+  <h3 class:active={activateSubTab === 'benefits'} class:non-visible={activeMainTab === 'company'}>Benefits</h3>
+  <h3 class:active={activateSubTab === 'summary'} class:non-visible={activeMainTab === 'job'}>Summary</h3>
+  <h3 class:active={activateSubTab === 'job-trends'} class:non-visible={activeMainTab === 'job'}>Job trends</h3>
+  <h3 class:active={activateSubTab === 'job-openings'} class:non-visible={activeMainTab === 'job'}>Job openings</h3>
+  <h3 class:active={activateSubTab === 'closed-jobs'} class:non-visible={activeMainTab === 'job'}>Closed jobs</h3>
 </div>
 <div class="job-details-tabs-container">
-  <div class="description-tab">
+  <div class="tab-content" class:non-visible={activateSubTab !== 'description'}>
     <DescriptionTab {job} />
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'salary'}>
+    <div>Random salary content</div>
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'skills'}>
+    <div>Random skills content</div>
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'benefits'}>
+    <div>Random benefits content</div>
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'summary'}>
+    <div>Random company summary content</div>
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'job-trends'}>
+    <div>Random job trends content</div>
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'job-openings'}>
+    <div>Random job openings content</div>
+  </div>
+  <div class="tab-content" class:non-visible={activateSubTab !== 'closed-jobs'}>
+    <div>Random closed jobs content</div>
   </div>
 </div>
 
@@ -98,7 +122,8 @@
     border-bottom: 1px solid var(--skyblue);
   }
 
-  .sub-tabs h3.non-visible {
+  .sub-tabs h3.non-visible,
+  .tab-content.non-visible {
     display: none;
   }
 
