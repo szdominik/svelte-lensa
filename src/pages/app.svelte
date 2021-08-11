@@ -6,6 +6,10 @@
   export let recommendedJobs;
 </script>
 
+<svelte:head>
+  <link href="https://cdn.lensa.com/img/icons/favicon.ico" rel="shortcut icon" />
+</svelte:head>
+
 {#if page === 'job-details'}
   <JobDetailsPage {highlightedJob} {recommendedJobs} />
 {/if}
