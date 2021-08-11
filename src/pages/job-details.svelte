@@ -7,15 +7,20 @@
 
   export let highlightedJob;
   export let recommendedJobs;
+
   const sidebarJobs = recommendedJobs.slice(0, 10);
   const bottomJobs = recommendedJobs.slice(10);
+
+  const jobDetailsTitle = `${highlightedJob.title} job in ${highlightedJob.city} at ${highlightedJob.company} | Lensa`;
+  const jobDetailsDescription = `${highlightedJob.company} is currently looking for ${highlightedJob.title} near ${highlightedJob.city}. Full job description and instant apply on Lensa.`;
 </script>
 
 <svelte:head>
-  <title
-    >{highlightedJob.title} job in {highlightedJob.city} at {highlightedJob.company}
-    | Lensa`</title
-  >
+  <title>{jobDetailsTitle}</title>
+  <meta name="title" content={jobDetailsTitle} />
+  <meta name="description" content={jobDetailsDescription} />
+  <meta property="og:title" content={jobDetailsTitle} />
+  <meta property="og:description" content={jobDetailsDescription} />
 </svelte:head>
 
 <Header />

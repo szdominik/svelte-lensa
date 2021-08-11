@@ -7,6 +7,14 @@
 </script>
 
 <svelte:head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Lensa" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://cdn.lensa.com/fb_g.png" />
+
   <link href="https://cdn.lensa.com/img/icons/favicon.ico" rel="shortcut icon" />
 </svelte:head>
 
