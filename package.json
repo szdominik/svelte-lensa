@@ -13,6 +13,9 @@
     "url": "git+https://github.com/szdominik/svelte-lensa.git"
   },
   "author": "@szdominik",
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
