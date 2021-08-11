@@ -1,5 +1,9 @@
 <script>
-  export let callback;
+  export let job;
+
+  let callback = () => {
+    console.log(job.apply_url);
+  };
 </script>
 
 <div class="row-for-buttons">

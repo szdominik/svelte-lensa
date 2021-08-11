@@ -12,12 +12,7 @@
 <div class="description">
   {@html job.description}
 </div>
-<ApplyButton
-  text="Apply"
-  callback={() => {
-    console.log(job.apply_url);
-  }}
-/>
+<ApplyButton {job} />
 
 <style>
   h4 {

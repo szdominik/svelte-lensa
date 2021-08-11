@@ -7,12 +7,7 @@
 
 <h1 class="job-title">{job.title} job</h1>
 <JobSubTitle {job} />
-<ApplyButton
-  text="Apply"
-  callback={() => {
-    console.log(job.apply_url);
-  }}
-/>
+<ApplyButton {job} />
 
 <style>
   h1.job-title {
