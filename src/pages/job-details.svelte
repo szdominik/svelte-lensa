@@ -7,6 +7,8 @@
 
   export let highlightedJob;
   export let recommendedJobs;
+  const sidebarJobs = recommendedJobs.slice(0, 10);
+  const bottomJobs = recommendedJobs.slice(10);
 </script>
 
 <svelte:head>
@@ -23,14 +25,14 @@
     <JobDetailsTabs job={highlightedJob} />
     <div class="similar-jobs">Similar jobs in the area</div>
     <div class="recommended-jobs">
-      {#each recommendedJobs as job}
+      {#each bottomJobs as job}
         <JobCard {job} />
       {/each}
     </div>
     <ShowMoreJobs />
   </div>
   <div class="job-details-sidebar">
-    {#each recommendedJobs.slice(0, 10) as job}
+    {#each sidebarJobs as job}
       <JobCard {job} />
     {/each}
   </div>
