@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     margin: 26px 32px 50px;
   }
 
