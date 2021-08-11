@@ -1,4 +1,4 @@
-const randomJobs = require('./random-jobs');
+const randomJobs = require('../fixtures/random-jobs');
 
 const getMoreJobs = (req, res) => {
   const sendableJobs = randomJobs.map(({ title, ...rest }) => ({

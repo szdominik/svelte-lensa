@@ -1,6 +1,6 @@
 const path = require('path');
-const randomJobs = require('./random-jobs');
-const highlightedJob = require('./highlighted-job');
+const randomJobs = require('../fixtures/random-jobs');
+const highlightedJob = require('../fixtures/highlighted-job');
 const config = require('../config');
 require('svelte/register');
 
