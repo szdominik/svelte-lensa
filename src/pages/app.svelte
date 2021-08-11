@@ -24,6 +24,7 @@
     --skyblue: #0073d6;
     --blue-2: #358cd8;
     --dark-grey: #313233;
+    --dark-grey-1: #787979;
     --dark-grey-4: #d5d5d5;
     --green-1: #338539;
     --green-2: #246028;

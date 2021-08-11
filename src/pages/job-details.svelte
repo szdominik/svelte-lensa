@@ -3,6 +3,7 @@
   import JobCard from '../components/job-card';
   import JobDetailsHeader from '../components/job-details-header';
   import JobDetailsTabs from '../components/job-details-tabs';
+  import ShowMoreJobs from '../components/show-more-jobs';
 
   export let highlightedJob;
   export let recommendedJobs;
@@ -26,6 +27,7 @@
         <JobCard {job} />
       {/each}
     </div>
+    <ShowMoreJobs />
   </div>
   <div class="job-details-sidebar">
     {#each recommendedJobs.slice(0, 10) as job}
