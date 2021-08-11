@@ -1,8 +1,10 @@
 <script>
+  import Popup from '../utils/popup-connector';
+
   export let job;
 
   let callback = () => {
-    console.log(job.apply_url);
+    Popup.openFeedApplyPopup(job);
   };
 </script>
 

@@ -14,7 +14,8 @@ const template = ({ css, data, head, html }) => `<!doctype html>
 <body>
   ${html}
   <script type='text/javascript'>
-    window.__INITIAL_STATE__ = ${JSON.stringify(data)}
+    window.__INITIAL_STATE__ = ${JSON.stringify(data)};
+    window.__CLIENT_CONFIG__ = {LENSA_WEBSITE_HOSTNAME: "https://lensa.com/"};
   </script>
   <script src='bundle.js'></script>
 </body>
