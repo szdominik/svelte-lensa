@@ -3,8 +3,26 @@
 
   export let job;
 
+  const jobData = {
+    company: {
+      logo_url: job.company_logo,
+      name: job.company,
+      description: job.company_description,
+    },
+    jobadvert: {
+      job_category: job.category,
+      cleaned_title: job.predicted_title.value,
+      location: job.city,
+      title: job.title,
+      jobadvertTitleFullOrig: job.title,
+      description: job.short_description,
+      url: job.apply_url,
+    },
+    isExpired: new Date(job.expire_at) < new Date(),
+  };
+
   let callback = () => {
-    Popup.openFeedApplyPopup(job);
+    Popup.openFeedApplyPopup({ jobData });
   };
 </script>
 
