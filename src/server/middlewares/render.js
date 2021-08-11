@@ -1,6 +1,7 @@
 const path = require('path');
 const randomJobs = require('./random-jobs');
 const highlightedJob = require('./highlighted-job');
+const config = require('../config');
 require('svelte/register');
 
 const pages = path.join(__dirname, '../../pages');
@@ -22,6 +23,7 @@ const sendResponse = (req, res) => {
   res.end(
     template({
       css: css.code,
+      config,
       data: res.locals,
       head,
       html,

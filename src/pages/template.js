@@ -1,4 +1,4 @@
-const template = ({ css, data, head, html }) => `<!doctype html>
+const template = ({ css, config, data, head, html }) => `<!doctype html>
 <html>
 <head>
   <meta charSet='utf-8' />
@@ -15,7 +15,7 @@ const template = ({ css, data, head, html }) => `<!doctype html>
   ${html}
   <script type='text/javascript'>
     window.__INITIAL_STATE__ = ${JSON.stringify(data)};
-    window.__CLIENT_CONFIG__ = {LENSA_WEBSITE_HOSTNAME: "https://lensa.com/"};
+    window.__CLIENT_CONFIG__ = ${JSON.stringify(config)};
   </script>
   <script src='bundle.js'></script>
 </body>
