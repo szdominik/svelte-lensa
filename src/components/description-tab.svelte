@@ -1,4 +1,6 @@
 <script>
+  import ApplyButton from './apply-button';
+
   export let job;
 </script>
 
@@ -10,6 +12,12 @@
 <div class="description">
   {@html job.description}
 </div>
+<ApplyButton
+  text="Apply"
+  callback={() => {
+    console.log(job.apply_url);
+  }}
+/>
 
 <style>
   h4 {
