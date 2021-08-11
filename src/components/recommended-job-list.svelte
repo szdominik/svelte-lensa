@@ -2,13 +2,32 @@
   import JobCard from '../components/job-card';
 
   export let recommendedJobs;
+
+  let loading = false;
+
+  const loadMoreJobs = async () => {
+    if (!loading) {
+      loading = true;
+
+      const result = await fetch('/get-more-jobs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const jobs = await result.json();
+      recommendedJobs = recommendedJobs.concat(jobs);
+
+      loading = false;
+    }
+  };
 </script>
 
 {#each recommendedJobs as job}
   <JobCard {job} />
 {/each}
 <div class="load-more-jobs-button">
-  <button type="button"> Show more jobs </button>
+  <button type="button" on:click={loadMoreJobs}> Show more jobs </button>
   <span class="more-jobs-recommended-jobs-count"> 500 more jobs </span>
 </div>
 
