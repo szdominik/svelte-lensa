@@ -3,7 +3,7 @@
   import JobCard from '../components/job-card';
   import JobDetailsHeader from '../components/job-details-header';
   import JobDetailsTabs from '../components/job-details-tabs';
-  import ShowMoreJobs from '../components/show-more-jobs';
+  import RecommendedJobList from '../components/recommended-job-list';
 
   export let highlightedJob;
   export let recommendedJobs;
@@ -24,12 +24,7 @@
     <JobDetailsHeader job={highlightedJob} />
     <JobDetailsTabs job={highlightedJob} />
     <div class="similar-jobs">Similar jobs in the area</div>
-    <div class="recommended-jobs">
-      {#each bottomJobs as job}
-        <JobCard {job} />
-      {/each}
-    </div>
-    <ShowMoreJobs />
+    <RecommendedJobList recommendedJobs={bottomJobs} />
   </div>
   <div class="job-details-sidebar">
     {#each sidebarJobs as job}

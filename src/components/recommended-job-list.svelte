@@ -1,3 +1,12 @@
+<script>
+  import JobCard from '../components/job-card';
+
+  export let recommendedJobs;
+</script>
+
+{#each recommendedJobs as job}
+  <JobCard {job} />
+{/each}
 <div class="load-more-jobs-button">
   <button type="button"> Show more jobs </button>
   <span class="more-jobs-recommended-jobs-count"> 500 more jobs </span>
