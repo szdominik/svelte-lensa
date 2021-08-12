@@ -1,5 +1,5 @@
 <script>
-  import JobCard from '../components/job-card';
+  import JobCard from './job-card.svelte';
 
   export let recommendedJobs;
 

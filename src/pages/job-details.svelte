@@ -1,9 +1,9 @@
 <script>
-  import Header from '../components/header';
-  import JobCard from '../components/job-card';
-  import JobDetailsHeader from '../components/job-details-header';
-  import JobDetailsTabs from '../components/job-details-tabs';
-  import RecommendedJobList from '../components/recommended-job-list';
+  import Header from '../components/header.svelte';
+  import JobCard from '../components/job-card.svelte';
+  import JobDetailsHeader from '../components/job-details-header.svelte';
+  import JobDetailsTabs from '../components/job-details-tabs.svelte';
+  import RecommendedJobList from '../components/recommended-job-list.svelte';
 
   export let highlightedJob;
   export let recommendedJobs;

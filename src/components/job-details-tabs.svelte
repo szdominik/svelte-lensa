@@ -1,5 +1,5 @@
 <script>
-  import DescriptionTab from './description-tab';
+  import DescriptionTab from './description-tab.svelte';
 
   export let job;
 

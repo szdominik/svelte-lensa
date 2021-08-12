@@ -1,6 +1,6 @@
 <script>
-  import JobSubTitle from './job-sub-title';
-  import ApplyButton from '../components/apply-button';
+  import JobSubTitle from './job-sub-title.svelte';
+  import ApplyButton from './apply-button.svelte';
 
   export let job;
 </script>

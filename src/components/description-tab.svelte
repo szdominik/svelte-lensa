@@ -1,5 +1,5 @@
 <script>
-  import ApplyButton from './apply-button';
+  import ApplyButton from './apply-button.svelte';
 
   export let job;
 </script>

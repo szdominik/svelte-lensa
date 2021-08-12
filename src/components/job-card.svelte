@@ -1,6 +1,6 @@
 <script>
   import classNames from 'classnames';
-  import JobSubTitle from './job-sub-title';
+  import JobSubTitle from './job-sub-title.svelte';
 
   export let className;
   export let job;
