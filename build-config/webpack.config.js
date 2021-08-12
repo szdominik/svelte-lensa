@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const sveltePreprocess = require('svelte-preprocess');
 const path = require('path');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -32,6 +33,7 @@ module.exports = {
             emitCss: true,
             hotReload: true,
             hydratable: true,
+            preprocess: sveltePreprocess(),
           },
         },
       },
