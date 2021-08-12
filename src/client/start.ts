@@ -1,4 +1,4 @@
-import App from 'pages/app';
+import App from '../pages/app.svelte';
 
 const app = new App({
   hydrate: true,
