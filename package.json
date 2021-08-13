@@ -3,8 +3,8 @@
   "description": "lensa as a svelte project",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "build-dev": "rollup -c -w",
+    "build": "rollup -c && rollup --config rollup.server.config.js",
+    "build-client": "rollup -c -w",
     "build-server": "rollup -w --config rollup.server.config.js",
     "start": "node src/server/server.js",
     "start-dev": "nodemon src/server/server.js",
