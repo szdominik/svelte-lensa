@@ -39,4 +39,4 @@ class Popup {
   }
 }
 
-module.exports = new Popup();
+export default new Popup();

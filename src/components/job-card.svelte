@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import classNames from 'classnames';
   import JobSubTitle from './job-sub-title.svelte';
 
-  export let className;
-  export let job;
+  export let className: string = undefined;
+  export let job: any;
 </script>
 
 <div class={classNames('job-card', className)}>

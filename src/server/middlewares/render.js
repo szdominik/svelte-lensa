@@ -2,10 +2,9 @@ const path = require('path');
 const randomJobs = require('../fixtures/random-jobs');
 const highlightedJob = require('../fixtures/highlighted-job');
 const config = require('../config');
+const template = require('../../pages/template');
 
-const pagesDir = path.join(__dirname, '../../pages');
 const publicDir = path.join(__dirname, '../../../public');
-const { template } = require(path.join(pagesDir, 'template'));
 
 const dataCollecting = () => {
   return {

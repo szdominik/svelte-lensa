@@ -16,6 +16,4 @@ const template = ({ css, config, data, head, html }) => `<!doctype html>
 </html>
 `;
 
-module.exports = {
-  template,
-};
+module.exports = template;
