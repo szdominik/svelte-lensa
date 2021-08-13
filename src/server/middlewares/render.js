@@ -2,10 +2,10 @@ const path = require('path');
 const randomJobs = require('../fixtures/random-jobs');
 const highlightedJob = require('../fixtures/highlighted-job');
 const config = require('../config');
-require('svelte/register');
 
-const pages = path.join(__dirname, '../../pages');
-const { template } = require(path.join(pages, 'template'));
+const pagesDir = path.join(__dirname, '../../pages');
+const publicDir = path.join(__dirname, '../../../public');
+const { template } = require(path.join(pagesDir, 'template'));
 
 const dataCollecting = () => {
   return {
@@ -16,7 +16,7 @@ const dataCollecting = () => {
 };
 
 const sendResponse = (req, res) => {
-  const App = require(path.join(pages, 'app.svelte')).default;
+  const App = require(path.join(publicDir, 'ssr'));
 
   const { head, html, css } = App.render(res.locals);
 
